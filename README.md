@@ -13,7 +13,24 @@
    ```bash
    docker run -it --name air-flow -p 3234:3234 -v /Users/ambujsingh/Documents/Airflow/dags:/opt/airflow/dags -e TZ=Your_TIMEZONE ubuntu:latest /bin/bash
    ```
-   #### Explanation of Above command:
+- `docker run`: This command is used to create and start a new Docker container.
+
+- `-it`: These flags indicate that an interactive terminal session is attached to the container, allowing you to interact with it.
+
+- `--name air-flow`: This assigns the name "air-flow" to the container.
+
+- `-p 3234:3234`: This maps port 3234 from the host machine to port 3234 in the container. This can be useful if your Airflow instance is configured to use port 3234.
+
+- `-v /Users/ambujsingh/Documents/Airflow/dags:/opt/airflow/dags`: This flag specifies a volume mount, linking a directory on the host machine (in this case, `/Users/ambujsingh/Documents/Airflow/dags`) to a directory inside the container (`/opt/airflow/dags`). This allows you to share DAG files between your local machine and the container.
+
+- `-e TZ=Your_TIMEZONE`: This sets the environment variable `TZ` inside the container to your desired timezone. Replace `Your_TIMEZONE` with the appropriate timezone string (e.g., "UTC").
+
+- `ubuntu:latest`: This specifies the Docker image to use for the container. In this case, it's the latest version of the Ubuntu operating system image.
+
+- `/bin/bash`: This specifies the command to run when the container starts. In this case, it's starting an interactive Bash shell.
+
+
+
 
    **3) Update, Install Apache Airflow & It's Dependencies:**
    Inside the container, update the package repository and install necessary dependencies:
