@@ -44,8 +44,7 @@
    pip3 install psycopg2-binary
    ```
 
-### 4) Install Apache Airflow:
-   Install Apache Airflow using pip:
+### 4) Install Apache Airflow: install Apache Airflow using pip3:
 
    ```bash
    pip3 install apache-airflow
@@ -117,9 +116,15 @@ sql_alchemy_conn = postgres://username:password@postgres-host:5432/dbname
 ### 7) Start Airflow Scheduler and Webserver:
    Start the Airflow scheduler and webserver in the background:
 ```bash
-   export AIRFLOW__CORE__TIMEZONE=Your_TIMEZONE (same as above)
 airflow scheduler -D
 airflow webserver -D
+```
+### If you face any problem in starting them in same terminal in background then open 2 terminals of that container and run below command one in each:
+```bash
+airflow scheduler
+```
+```bash
+`airflow webserver
 ```
 
 ### 8) Access the Airflow Web UI:
