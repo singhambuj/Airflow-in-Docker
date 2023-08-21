@@ -22,6 +22,9 @@
    apt-get update
    apt-get install -y python3-pip
    ```
+   ```bash
+   pip3 install psycopg2-binary
+   ```
 
 ### 4) Install Apache Airflow:
    Install Apache Airflow using pip:
