@@ -103,14 +103,51 @@ airflow webserver -D
 ### 8) Access the Airflow Web UI:
    Open your web browser and navigate to `http://localhost:3234` if you have chosen another PORT make sure you write same in URL. You'll see the Airflow Web UI. Log in using the credentials you provided earlier.
 
-   
+### 9) Change from SequentialExecutor to LocalExecutor
+You can see this on web UI `Do not use the SequentialExecutor in production. Click here for more information.`
+
+#### Open `airflow.cfg` file by following above method and find this line-
+```bash
+executor = SequentialExecutor
+```
+Change it to-
+```bash
+executor = LocalExecutor
+```
 
 
-- If you want to exit the container you can do this by typing `exit`. 
-And to stop and remove the container, use the following commands:
+
+
+### If you want to exit the container you can do this by typing `exit`. 
+#### And to stop and remove the container, use the following commands:
 
 ```bash
 docker stop container-name
 docker rm container-name
 ``` 
 
+##### If you get warning like this `/usr/local/lib/python3.10/dist-packages/airflow/configuration.py:421 FutureWarning: Bad scheme in Airflow configuration core > sql_alchemy_conn: `postgres`. As of SQLAlchemy 1.4 (adopted in Airflow 2.3) this is no longer supported.  You must change to `postgresql` before the next Airflow release.` while executing this command `airflow config get-value api auth_backends` then open `airflow.cfg` file again and change [database] section like below you just need to replace `postgres` to `postgresql` nothing else. see below line-
+
+
+```bash
+sql_alchemy_conn = postgresql://postgres:postgres@172.17.0.3:5432/postgres
+```
+
+### Activate to accept API resquest 
+#### Open `airflow.cfg` file again and do this- 
+```bash
+# auth_backend = airflow.api.auth.backend.deny_all
+auth_backend = airflow.api.auth.backend.basic_auth
+```
+In above i just commented above line and written new to accept aip requests.
+
+
+### Change timezone of airflow 
+Open `airflow.cfg` file again and find this line-
+```bash
+default_timezone = UTC
+```
+change it to your desired timezone like i have changed it to Indian Standard Time
+```bash
+default_timezone = IST
+``` 
