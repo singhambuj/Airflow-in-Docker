@@ -320,3 +320,5 @@ curl -X POST \
   -d '{"dag_run_id": "your_run_id"}' \
   "$AIRFLOW_API_URL"
 ```
+
+You can modify -d to give it execution_date and other parameters based on your requirements.
