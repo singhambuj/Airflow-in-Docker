@@ -22,12 +22,15 @@
    apt-get update
    apt-get install -y python3-pip
    ```
+   ```bash
+   pip3 install psycopg2-binary
+   ```
 
 ### 4) Install Apache Airflow:
    Install Apache Airflow using pip:
 
    ```bash
-   pip install apache-airflow
+   pip3 install apache-airflow
    ```
 
 ### Open another `terminal` (normal terminal) to install postgres in different container, you may install postgres in same container also by following same below steps-
