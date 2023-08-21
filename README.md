@@ -139,7 +139,7 @@ sql_alchemy_conn = postgresql://postgres:postgres@172.17.0.3:5432/postgres
 # auth_backend = airflow.api.auth.backend.deny_all
 auth_backend = airflow.api.auth.backend.basic_auth
 ```
-In above i just commented above line and written new to accept aip requests.
+In above i just commented above line and written new to accept API requests. Earlier it was denying all the requests.
 
 
 ### Change timezone of airflow 
