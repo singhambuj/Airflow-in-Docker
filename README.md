@@ -159,6 +159,7 @@ docker rm container-name
 ```bash
 sql_alchemy_conn = postgresql://postgres:postgres@172.17.0.3:5432/postgres
 ```
+`Your setup may be different don't worry about that.`
 
 ### Activate to accept API resquest 
 #### Open `airflow.cfg` file again and do this- 
