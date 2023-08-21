@@ -137,7 +137,7 @@ You can see this on web UI `Do not use the SequentialExecutor in production. Cli
 ```bash
 executor = SequentialExecutor
 ```
-Change it to-
+#### Change it to-
 ```bash
 executor = LocalExecutor
 ```
