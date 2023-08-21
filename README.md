@@ -18,7 +18,7 @@
    **3) Update, Install Apache Airflow & It's Dependencies:**
    Inside the container, update the package repository and install necessary dependencies:
 
-   ```bash
+  ```bash
    apt-get update
    apt-get install -y python3-pip
    ```
@@ -27,7 +27,10 @@
    Install Apache Airflow using pip:
 
    ```bash
-   pip install apache-airflow
+   pip3 install apache-airflow
+   ```
+ ```bash
+   airflow db init
    ```
 
 ### Open another `terminal` (normal terminal) to install postgres in different container, you may install postgres in same container also by following same below steps-
