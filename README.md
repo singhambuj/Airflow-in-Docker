@@ -13,6 +13,7 @@
    ```bash
    docker run -it --name air-flow -p 3234:3234 -v /Users/ambujsingh/Documents/Airflow/dags:/opt/airflow/dags -e TZ=Your_TIMEZONE ubuntu:latest /bin/bash
    ```
+#### Explanation of above command:-
 - `docker run`: This command is used to create and start a new Docker container.
 
 - `-it`: These flags indicate that an interactive terminal session is attached to the container, allowing you to interact with it.
