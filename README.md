@@ -33,7 +33,7 @@
    pip3 install apache-airflow
    ```
 
-### Open another `terminal` (normal terminal) to install postgres in different container, you may install postgres in same container also by following same below steps-
+### Open another `terminal` (normal terminal) to install postgres in different container-
    ```bash
    docker pull postgres
    ```
