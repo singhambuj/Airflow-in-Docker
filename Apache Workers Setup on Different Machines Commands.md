@@ -8,34 +8,34 @@ that IP address is of that container ip in which that rabbitmq is running
 Last login: Tue Aug 22 18:46:33 on ttys011
 env /usr/bin/arch -x86_64 /bin/zsh --login
 ambujsingh@HAT-IN-LAP-080 ~ % env /usr/bin/arch -x86_64 /bin/zsh --login
-### ambujsingh@HAT-IN-LAP-080 ~ % docker run -it --name airflow_worker2 -v /Users/ambujsingh/Documents/Airflow/dags:/opt/airflow/dags -e TZ=UTC ubuntu:latest /bin/bash
-### root@29970dff84c7:/# apt-get update
+### docker run -it --name airflow_worker2 -v /Users/ambujsingh/Documents/Airflow/dags:/opt/airflow/dags -e TZ=UTC ubuntu:latest /bin/bash
+### root@c7:/# apt-get update
 ### apt-get install -y python3-pip
 Get:1 http://ports.ubuntu.com/ubuntu-ports jammy InRelease [270 kB]
 Get:2 http://ports.ubuntu.com/ubuntu-ports jammy-updates InRelease [119 kB]
-root@29970dff84c7:/# 
-root@29970dff84c7:/# 
-### root@29970dff84c7:/# pip3 install psycopg2-binary
+root@c7:/# 
+root@c7:/# 
+### root@c7:/# pip3 install psycopg2-binary
 Collecting psycopg2-binary
-root@29970dff84c7:/# 
-### root@29970dff84c7:/# pip3 install apache-airflow
+root@c7:/# 
+### root@c7:/# pip3 install apache-airflow
 Collecting apache-airflow
   Downloading apache_airflow-2.7.0-py3-none-any.whl (12.9 MB)
      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 12.9/12.9 MB 32.7 MB/s eta 0:00:00
 Successfully installed Babel-2.12.1 Flask-Babel-2.0.0 Flask-JWT-Extended-4.5.2 Flask-Limiter-3.3.1 Flask-SQLAlchemy-2.5.1 Mako-1.2.4 PyYAML-6.0.1 WTForms-3.0.1 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
-root@29970dff84c7:/# 
-### root@29970dff84c7:/# airflow db migrate
+root@c7:/# 
+### root@c7:/# airflow db migrate
 DB: sqlite:////root/airflow/airflow.db
 Performing upgrade to the metadata database sqlite:////root/airflow/airflow.db
 Database migrating done! 
-### root@29970dff84c7:/# ls /root/airflow/
+### root@c7:/# ls /root/airflow/
 airflow.cfg  airflow.db  logs
-### root@29970dff84c7:/# apt-get install nano
+### root@c7:/# apt-get install nano
 Reading package lists... Done
-root@29970dff84c7:/# 
-### root@29970dff84c7:/# nano /root/airflow/airflow.cfg
-root@29970dff84c7:/# 
-### root@29970dff84c7:/# airflow db migrate
+root@c7:/# 
+### root@c7:/# nano /root/airflow/airflow.cfg
+root@c7:/# 
+### root@c7:/# airflow db migrate
 [2023-08-22T13:56:41.503+0000] {cli_parser.py:56} ERROR - Failed to load CLI commands from executor: CeleryExecutor
 Traceback (most recent call last):
   File "/usr/local/lib/python3.10/dist-packages/airflow/cli/cli_parser.py", line 52, in <module>
@@ -81,17 +81,17 @@ ModuleNotFoundError: No module named 'kubernetes'
 WARNI [unusual_prefix_4c1c0063a36d033a56d4343efc723c3a45c1bd59_example_local_kubernetes_executor] Install Kubernetes dependencies with: pip install apache-airflow[cncf.kubernetes]
 WARNI [unusual_prefix_45fb6c494355141389b80b1d50f93a2d0d272ee8_workday] Could not import pandas. Holidays will not be considered.
 Database migrating done!
-root@29970dff84c7:/# 
-### root@29970dff84c7:/# pip install apache-airflow[celery]
+root@c7:/# 
+### root@c7:/# pip install apache-airflow[celery]
 Requirement already satisfied: apache-airflow[celery] in /usr/local/lib/python3.10/dist-packages (2.7.0)
-root@29970dff84c7:/# 
-### root@29970dff84c7:/# airflow db migrate
+root@c7:/# 
+### root@c7:/# airflow db migrate
 DB: sqlite:////root/airflow/airflow.db
 Performing upgrade to the metadata database sqlite:////root/airflow/airflow.db
 [2023-08-22T13:57:48.572+0000] {migration.py:213} INFO - Context impl SQLiteImpl.
 Database migrating done!
-root@29970dff84c7:/# 
-### root@29970dff84c7:/# airflow celery worker
+root@c7:/# 
+### root@c7:/# airflow celery worker
 [2023-08-22T13:58:15.303+0000] {configuration.py:2053} INFO - Creating new FAB webserver config file in: /root/airflow/webserver_config.py
 [2023-08-22 13:58:15 +0000] [4284] [INFO] Starting gunicorn 21.2.0
 [2023-08-22 13:58:15 +0000] [4284] [INFO] Listening at: http://[::]:8793 (4284)
