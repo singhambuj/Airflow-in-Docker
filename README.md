@@ -50,6 +50,13 @@
    pip3 install apache-airflow
    ```
 
+### 5) Initialize Airflow Database:
+   Initialize the Airflow metadata database:
+
+   ```bash
+   airflow db init
+   ```
+
 ### Open another `terminal` (normal terminal) to install postgres in different container-
    ```bash
    docker pull postgres
@@ -92,13 +99,11 @@ sql_alchemy_conn = postgres://username:password@postgres-host:5432/dbname
 
 - Then save that `airflow.cfg` file by pressing `ctrl+o` then press `enter` then press `ctrl+x` to exit.
 
-
-### 5) Initialize Airflow Database:
-   Initialize the Airflow metadata database:
-
-   ```bash
+### Initialize db again (execute this command in airflow container bash
+  ```bash
    airflow db init
    ```
+
 
 ### 6) Create an Admin User:
    Create an admin user for the Airflow Web UI:
