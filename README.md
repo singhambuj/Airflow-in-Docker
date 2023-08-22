@@ -33,7 +33,7 @@
 
 
 
-   **3) Update, Install Apache Airflow & It's Dependencies:**
+   **3) Update, Install Python & It's Dependencies:**
    Inside the container, update the package repository and install necessary dependencies:
 
    ```bash
