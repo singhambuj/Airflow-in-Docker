@@ -1,6 +1,6 @@
 ## This is a command history text file which i have executed to create workers make it look good when you are free. i have deleted those long installation info after each task-
 ### Keep in mind while running this and trying to trigger the DAG in main it was throwing error which you can see after starting `airflow celery worker` that is last command in this file. If you fix it try to update that command here too-
-in `airflow.cfg` i have used broker_url of that container rabbitmq which will be used to make communication between workers and  
+in `airflow.cfg` i have used broker_url of that container rabbitmq which will be used to make communication between workers and scheduler 
 `broker_url = pyamqp://guest:guest@172.17.0.2:5672/`
 that IP address is of that container ip in which that rabbitmq is running
 
