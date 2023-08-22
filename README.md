@@ -118,13 +118,7 @@ sql_alchemy_conn = postgres://username:password@postgres-host:5432/dbname
        --password admin
    ```
 
-### 7) Start Airflow Scheduler and Webserver:
-   Start the Airflow scheduler and webserver in the background:
-```bash
-airflow scheduler -D
-airflow webserver -D
-```
-### If you face any problem during starting them in same terminal in background press `ctrl+c` then open 2 terminals of that container and run below command one in each:
+### 7) Open 2 terminals of that container and run below command one in each:
 ```bash
 airflow scheduler
 ```
@@ -132,6 +126,7 @@ airflow scheduler
 airflow webserver
 ```
 
+`You may start them in background also.`
 ### 8) Access the Airflow Web UI:
    Open your web browser and navigate to `http://localhost:3234` if you have chosen another PORT make sure you write same in URL. You'll see the Airflow Web UI. Log in using the credentials you provided earlier.
 
