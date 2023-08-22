@@ -180,10 +180,6 @@ Open `airflow.cfg` file again and find this line-
 ```bash
 default_timezone = UTC
 ```
-change it to your desired timezone like i have changed it to Indian Standard Time
-```bash
-default_timezone = IST
-``` 
 
 ## Run DAG using curl command
 ```bash
