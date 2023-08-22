@@ -176,7 +176,7 @@ In above i just commented above line and written new to accept aip requests.
 
 
 ### Change timezone of airflow 
-Open `airflow.cfg` file again and find this line and change it whichever timezone you prefer-
+Open `airflow.cfg` file again and find this line and change it whichever timezone you prefer (example replace UTC with Asia/Kolkata)-
 ```bash
 default_timezone = UTC
 ```
