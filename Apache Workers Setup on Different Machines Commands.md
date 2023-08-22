@@ -1,9 +1,17 @@
 ## This is a command history text file which i have executed to create workers make it look good when you are free. i have deleted those long installation info after each task-
 ### Keep in mind while running this and trying to trigger the DAG in main it was throwing error which you can see after starting `airflow celery worker` that is last command in this file. If you fix it try to update that command here too-
-in `airflow.cfg` i have used broker_url of that main container rabbitmq which will use it as a worker 
+in `airflow.cfg` i have used broker_url of that container rabbitmq which will be used to make communication between workers and  
 `broker_url = pyamqp://guest:guest@172.17.0.2:5672/`
 that IP address is of that container ip in which that rabbitmq is running
 
+- The Airflow Web Server provides the user interface for managing tasks and DAGs.
+- A DAG trigger initiates the process by triggering the DAG execution.
+- The Airflow Scheduler determines task dependencies and schedules tasks.
+- The Scheduler sends task execution requests to available Celery Workers.
+- Celery Workers execute the tasks assigned to them.
+- The Database Backend stores metadata about tasks, DAGs, and execution history.
+- There are multiple Celery Workers for task execution, each of which communicates with RabbitMQ.
+- RabbitMQ acts as the message broker, facilitating communication between the scheduler and the workers.
 
 Last login: Tue Aug 22 18:46:33 on ttys011
 env /usr/bin/arch -x86_64 /bin/zsh --login
