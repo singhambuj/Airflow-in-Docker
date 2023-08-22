@@ -96,7 +96,7 @@ sql_alchemy_conn = postgres://username:password@postgres-host:5432/dbname
 
 ```
 - Make sure you replace 'username', 'password', 'dbname' and 'postgres-host' with actual names.
-- For `postgres-host` you need to enter HOST-IP of postgres container which you can get by executing this command `docker inspect -f '{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' <container_name_or_id>` (As it's running in docker so when you restart container it may change so be careful about this you may get `'connection refused error'`) in your normal terminal.
+- For `postgres-host` you need to enter HOST-IP of postgres container which you can get by executing this command `docker inspect -f '{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' <container_name_or_id>` (As it's running in docker so when you restart container it may change so be careful about this you may get `connection refused error`) in your normal terminal.
 
 - Then save that `airflow.cfg` file by pressing `ctrl+o` then press `enter` then press `ctrl+x` to exit.
 
