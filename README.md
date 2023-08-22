@@ -124,12 +124,12 @@ sql_alchemy_conn = postgres://username:password@postgres-host:5432/dbname
 airflow scheduler -D
 airflow webserver -D
 ```
-### If you face any problem in starting them in same terminal in background then open 2 terminals of that container and run below command one in each:
+### If you face any problem during starting them in same terminal in background press `ctrl+c` then open 2 terminals of that container and run below command one in each:
 ```bash
 airflow scheduler
 ```
 ```bash
-`airflow webserver
+airflow webserver
 ```
 
 ### 8) Access the Airflow Web UI:
