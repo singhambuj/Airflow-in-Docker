@@ -1,5 +1,7 @@
 ## This is a command history text file which i have executed to create workers make it look good when you are free.
 in `airflow.cfg` i have used broker_url of that main container rabbitmq which will use it as a worker 
+`broker_url = pyamqp://guest:guest@172.17.0.2:5672/`
+that IP address is of that container ip in which that rabbitmq is running
 
 
 Last login: Tue Aug 22 18:46:33 on ttys011
