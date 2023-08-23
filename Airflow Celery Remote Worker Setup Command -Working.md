@@ -11,7 +11,7 @@ load_examples = False
 sql_alchemy_conn = postgres://postgres:postgres@172.17.0.3:5432/postgres
 
 [celery]
-\# This is url of RabbitMQ for communication between Scheduler and Celery Worker
+# This is url of RabbitMQ for communication between Scheduler and Celery Worker
 broker_url = pyamqp://guest:guest@172.17.0.4:5672/
 ```
 
