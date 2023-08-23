@@ -1,5 +1,4 @@
 ## Remote Worker Setup Overview is below:-
-```txt
 Apache Airflow can be configured to run on multiple workers to distribute the task execution load. However, it's important to clarify that when we talk about "workers" in the context of Airflow, we are usually referring to the processes responsible for executing tasks within a single Airflow deployment, rather than separate physical machines.
 
 In Airflow, a typical setup involves the following components:
@@ -42,8 +41,6 @@ To set up multiple workers:
    Trigger DAGs through the Airflow web UI as usual. The scheduler will distribute tasks among the available workers, ensuring efficient task execution.
 
 Remember that in a distributed setup, all workers should have access to the same DAG definitions and dependencies to ensure consistent execution. Also, appropriate network and firewall configurations must be in place to allow communication between the components.
-
-```
 
 ## Commands Execution is below:-
 
