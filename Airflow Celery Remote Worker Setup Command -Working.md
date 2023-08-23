@@ -1,4 +1,5 @@
 ### Changes to be made in `/root/airflow/airflow.cfg` file
+#### Those IP Adresses of Host Names are that IP of container in which they running everytime you restart it will change so make sure you write exact one you can get those IP of any container using this command `docker inspect -f '{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' <container name>`
 ```cfg
 [core]
 dags_folder = /opt/airflow/dags
