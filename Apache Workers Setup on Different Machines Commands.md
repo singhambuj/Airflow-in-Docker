@@ -3,7 +3,7 @@
 in `airflow.cfg` i have used broker_url of that container rabbitmq which will be used to make communication between workers and scheduler 
 `broker_url = pyamqp://guest:guest@172.17.0.2:5672/`
 that IP address is of that container ip in which that rabbitmq is running
-
+- All the workers have same DAG access otherwise they will not work, like dag in stored in `opt/root/dags` dir so it will be same in all the workers `airflow.cfg` file which you can see in docker run command below.
 - The Airflow Web Server provides the user interface for managing tasks and DAGs.
 - A DAG trigger initiates the process by triggering the DAG execution.
 - The Airflow Scheduler determines task dependencies and schedules tasks.
