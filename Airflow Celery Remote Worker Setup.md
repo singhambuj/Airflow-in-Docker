@@ -1,5 +1,6 @@
 ## Remote Worker Setup Overview is below:-
 **Note:** Make sure you have RabbitMQ installed and running for broker_url. 
+
 Apache Airflow can be configured to run on multiple workers to distribute the task execution load. However, it's important to clarify that when we talk about "workers" in the context of Airflow, we are usually referring to the processes responsible for executing tasks within a single Airflow deployment, rather than separate physical machines.
 
 In Airflow, a typical setup involves the following components:
