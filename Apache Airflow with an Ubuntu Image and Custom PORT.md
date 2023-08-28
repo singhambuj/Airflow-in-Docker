@@ -80,7 +80,6 @@ ls /root/airflow
 - Now open `airflow.cfg` file using command: `nano /root/airflow/airflow.cfg`
 - Find this line `dags_folder = /root/airflow/dags` change it to your mapped dir like mine was `/opt/airflow/dags`
 - Find this line: `load_examples = True` set it to `False`
-- Find this line: dags_folder = `/root/airflow/dags` change `root` to `opt` rest leave as it is.
 - Find this line: `web_server_port = 8080`
 - Change `8080` to your desired port which you have chosen while creating container like in my case it was `3234`
 * Find below line- 
