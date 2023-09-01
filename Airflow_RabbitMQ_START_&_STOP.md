@@ -49,7 +49,7 @@ airflow-scheduler.pid
 airflow-webserver.pid
 ```
 - When the services are running then these files will have their process ID
-## You can you `cat` command to find those process ID and kill them, like below:
+## You can use `cat` command to find those process ID and kill them, like below:
 
    - To stop webserver execute this command: 
    ```bash
