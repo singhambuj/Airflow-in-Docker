@@ -1,4 +1,8 @@
 # Airflow-in-Docker
+## Find docker container IP
+```bash
+docker inspect -f '{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' <container name>
+```
 In this i have included command history of each setup, i have removed unnecessary installation info after each command execution to make it short.
 You may refer the desired file according to your need.
 
