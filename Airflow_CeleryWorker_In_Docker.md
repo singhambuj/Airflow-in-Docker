@@ -10,6 +10,14 @@ apt-get update
 ```bash
 apt-get install -y python3-pip
 ```
+## Step 3.1
+```bash
+python3 -m venv airflow_env
+```
+## Step 3.2 Activate Venv
+```bash
+source airflow_worker_env/bin/activate
+```
 ## Step 4
 ```bash
 pip3 install psycopg2-binary
