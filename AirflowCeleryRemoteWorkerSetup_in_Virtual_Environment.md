@@ -54,6 +54,7 @@ load_examples = False
 sql_alchemy_conn = postgresql://user:password@hostIP/db
 ```
 - *Find `[celery]` and choose `broker_url`-*
+```bash
 [celery]
 # This is url of RabbitMQ for communication between Scheduler and Celery Worker
 broker_url = pyamqp://user:password@host:port/
