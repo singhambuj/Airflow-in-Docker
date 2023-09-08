@@ -86,6 +86,7 @@ sql_alchemy_conn = postgresql://user:password@hostIP/db
 # This is url of RabbitMQ for communication between Scheduler and Celery Worker
 broker_url = pyamqp://user:password@host:port/
 ```
+#### Save above file by pressing `ctrl+o` and press `return` then `ctrl+x` to exit from the file.
 
 #### Note: If any section is missing you can create them by yourself just like above
 ### Now you need to migrate your db by using below command:
@@ -134,7 +135,7 @@ PrivateTmp=true
 WantedBy=multi-user.target
 
 ```
-### Save above file by pressing `ctrl+o` and press `return` then `ctrl+x` to exit from the file.
+#### Save above file by pressing `ctrl+o` and press `return` then `ctrl+x` to exit from the file.
 
 ###  Load Enable and Start the Service
 ```bash
