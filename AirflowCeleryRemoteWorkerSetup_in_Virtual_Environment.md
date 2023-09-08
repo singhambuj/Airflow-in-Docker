@@ -113,7 +113,7 @@ apt-get install sudo
 sudo nano /etc/systemd/system/airflow-worker.service
 ```
 
-### Add below contents in airflow-worker.service` file:
+### Add below contents in `airflow-worker.service` file:
 
 #### Note: make you sure you follow your `path/to/dir` where each appropriate file is present.
 ```bash
