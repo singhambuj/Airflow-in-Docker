@@ -33,7 +33,7 @@ airflow db init
 ```bash
 ls
 ```
-## Open this `airflow.cfg` file using nano or any other text editor like below: 
+## Open this `airflow.cfg` file using `nano` or any other text editor like below: 
 ```
 nano airflow.cfg
 ```
@@ -48,7 +48,7 @@ executor = CeleryExecutor
 load_examples = False
 
 [database]
-sql_alchemy_conn = postgresql://user:password@172.17.0.3:5432/db
+sql_alchemy_conn = postgresql://user:password@hostIP/db
 
 [celery]
 # This is url of RabbitMQ for communication between Scheduler and Celery Worker
