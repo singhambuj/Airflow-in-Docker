@@ -90,8 +90,9 @@ broker_url = pyamqp://user:password@host:port/
 #### Note: If any section is missing you can create them by yourself just like above
 ### Now you need to migrate your db by using below command:
 ```bash
-airflow db init
+airflow db migrate
 ```
+- Note: If you see any error message while migrating it means you have some missing libraries in your remote worker so you can just install them and then use `airflow db migrate` command again.
 
 ### Start CeleryWorker by using below command:
 ```bash
@@ -105,14 +106,14 @@ airflow celery worker
 apt-get install sudo
 ```
 
-### Create a airflow-worker.service` file by using below command:
+### Create a `airflow-worker.service` file by using below command:
 ```bash
 sudo nano /etc/systemd/system/airflow-worker.service
 ```
 
 ### Add below contents in airflow-worker.service` file:
 
-#### Note: make you sure you follow your `path` where each appropriate file is present.
+#### Note: make you sure you follow your `path/to/dir` where each appropriate file is present.
 ```bash
 [Unit]
 Description=Airflow worker daemon
