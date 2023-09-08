@@ -27,7 +27,7 @@ pip3 install --upgrade apache-airflow-providers-celery
 ```bash
 airflow db init
 ```
-## After that you need to modify airflow.cfg file to use this system as remote worker:
+## After that you need to modify `airflow.cfg` file to use this system as remote worker:
 ### To locate airflow.cfg please change your current working dir to `/root/airflow/` dir
 ## Use below command to list all the files:
 ```bash
