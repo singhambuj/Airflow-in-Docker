@@ -59,8 +59,8 @@ airflow db init
 ls
 ```
 ### Open this `airflow.cfg` file using `nano` or any other text editor like below: 
-```
 - Install `nano` by using `apt-get install nano` command then execute below command.
+```bash
 nano airflow.cfg
 ```
 
